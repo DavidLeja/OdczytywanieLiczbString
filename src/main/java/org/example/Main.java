@@ -39,10 +39,14 @@ public class Main {
         try {
             Scanner fsc = new Scanner(file);
             int suma = 0;
+            int suma2 = 0;
             while(fsc.hasNextLine()){
                 suma += zwrocCalaLiczbe(fsc.nextLine());
+                suma2 += zwrocCalaLiczbeMapa(fsc.nextLine());
             }
-            System.out.println(suma);
+            System.out.println("Suma liczb zczytanych z tekstu starą metodą: "+suma);
+            System.out.println("Suma liczb zczytanych z tekstu dołączając liczby zapisane słownie: "+suma2);
+
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }

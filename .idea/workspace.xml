@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad6e5667-b29a-4db2-b26a-a8c8748b52a8" name="Changes" comment="dodanie mapy liczb">
+    <list default="true" id="ad6e5667-b29a-4db2-b26a-a8c8748b52a8" name="Changes" comment="dodanie metody zwrocCalaLiczbeMapa">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +37,9 @@
 }]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 6
@@ -88,7 +92,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765746496049</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="dodanie metody zwrocCalaLiczbeMapa">
+      <option name="closed" value="true" />
+      <created>1765746727473</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1765746727473</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -105,6 +117,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="kompletne zadanie" />
     <MESSAGE value="dodanie mapy liczb" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodanie mapy liczb" />
+    <MESSAGE value="dodanie metody zwrocCalaLiczbeMapa" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodanie metody zwrocCalaLiczbeMapa" />
   </component>
 </project>
