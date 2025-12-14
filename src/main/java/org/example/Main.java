@@ -2,6 +2,8 @@ package org.example;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -32,13 +34,6 @@ public class Main {
 
 
     public static void main(String[] args) {
-//        Scanner s = new Scanner(System.in);
-//        String line = s.nextLine();
-//
-//        System.out.println("Pierwsza liczba od lewej: " + zwrocLiczbeodLewej(line));
-//        System.out.println("Pierwsza liczba od prawej: " + zwrocLiczbeodPrawej(line));
-//        System.out.println("Liczba: "+zwrocCalaLiczbe(line));
-
 
         File file = new File("src/main/java/org/example/2023_1_input.txt");
         try {
@@ -86,7 +81,23 @@ public class Main {
         return Integer.parseInt(number);
     }
 
+    public static int zwrocCalaLiczbeMapa(String line) {
+        List<Character> znalezione = new ArrayList<>();
 
+        for (int i = 0; i < line.length(); i++) {
+            for (Map.Entry<String, Character> entry : MapaLiczb.entrySet()) {
+                if (line.startsWith(entry.getKey(), i)) {
+                    znalezione.add(entry.getValue());
+                }
+            }
+        }
+
+        if (znalezione.isEmpty()) {
+            return -1;
+        }
+
+        return Integer.parseInt("" + znalezione.get(0) + znalezione.get(znalezione.size() - 1));
+    }
 
 
 
