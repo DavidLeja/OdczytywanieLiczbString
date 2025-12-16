@@ -9,7 +9,17 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static final Map<String, Character> MapaLiczb = Map.ofEntries(
+    private static final List<Map.Entry<String, Character>> MapaLiczb = List.of(
+            Map.entry("three", '3'),
+            Map.entry("seven", '7'),
+            Map.entry("eight", '8'),
+            Map.entry("four", '4'),
+            Map.entry("five", '5'),
+            Map.entry("nine", '9'),
+            Map.entry("one", '1'),
+            Map.entry("two", '2'),
+            Map.entry("six", '6'),
+            Map.entry("zero", '0'),
             Map.entry("0", '0'),
             Map.entry("1", '1'),
             Map.entry("2", '2'),
@@ -19,18 +29,9 @@ public class Main {
             Map.entry("6", '6'),
             Map.entry("7", '7'),
             Map.entry("8", '8'),
-            Map.entry("9", '9'),
-            Map.entry("zero", '0'),
-            Map.entry("one", '1'),
-            Map.entry("two", '2'),
-            Map.entry("three", '3'),
-            Map.entry("four", '4'),
-            Map.entry("five", '5'),
-            Map.entry("six", '6'),
-            Map.entry("seven", '7'),
-            Map.entry("eight", '8'),
-            Map.entry("nine", '9')
+            Map.entry("9", '9')
     );
+
 
 
     public static void main(String[] args) {
