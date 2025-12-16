@@ -37,7 +37,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String linia = scanner.nextLine();
-        System.out.println(zwrocOdLewejMapa(linia));
+        System.out.println(zwrocCalaLiczbeMapa(linia));
 
 //        File file = new File("src/main/java/org/example/2023_1_input.txt");
 //        try {
@@ -89,6 +89,16 @@ public class Main {
         return Integer.parseInt(number);
     }
 
+    public static int zwrocCalaLiczbeMapa(String line) {
+        char left = zwrocOdLewejMapa(line);
+        char right = zwrocOdPrawejMapa(line);
+        if (!Character.isDigit(left) || !Character.isDigit(right)) {
+            return -1;
+        }
+        String number = "" + left + right;
+        return Integer.parseInt(number);
+    }
+
 
     public static char zwrocOdLewejMapa(String line) {
         for (int i = 0; i < line.length(); i++) {
@@ -100,6 +110,21 @@ public class Main {
         }
         return ' ';
     }
+
+    public static char zwrocOdPrawejMapa(String line) {
+        for (int i = line.length() - 1; i >= 0; i--) {
+            for (var mapa : MapaLiczb) {
+                int start = i - mapa.getKey().length() + 1;
+                if (start >= 0 && line.startsWith(mapa.getKey(), start)) {
+                    return mapa.getValue();
+                }
+            }
+        }
+        return ' ';
+    }
+
+
+
 
 
 

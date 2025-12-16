@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad6e5667-b29a-4db2-b26a-a8c8748b52a8" name="Changes" comment="poprawa mapy liczb, zmiana kolejności" />
+    <list default="true" id="ad6e5667-b29a-4db2-b26a-a8c8748b52a8" name="Changes" comment="dodanie zwrocodlewejmapa">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765924162691</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="dodanie zwrocodlewejmapa">
+      <option name="closed" value="true" />
+      <created>1765924465423</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1765924465423</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,6 +143,7 @@
     <MESSAGE value="dodanie metody zwrocCalaLiczbeMapa" />
     <MESSAGE value="zliczanie liczb" />
     <MESSAGE value="poprawa mapy liczb, zmiana kolejności" />
-    <option name="LAST_COMMIT_MESSAGE" value="poprawa mapy liczb, zmiana kolejności" />
+    <MESSAGE value="dodanie zwrocodlewejmapa" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodanie zwrocodlewejmapa" />
   </component>
 </project>
