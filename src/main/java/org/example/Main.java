@@ -35,25 +35,22 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String linia = scanner.nextLine();
-        System.out.println(zwrocCalaLiczbeMapa(linia));
+        File file = new File("src/main/java/org/example/2023_1_input.txt");
+        try {
+            Scanner fsc = new Scanner(file);
+            int suma = 0;
+            int suma2 = 0;
+            while(fsc.hasNextLine()){
+                String line = fsc.nextLine();
+                suma += zwrocCalaLiczbe(line);
+                suma2 += zwrocCalaLiczbeMapa(line);
+            }
+            System.out.println("Suma liczb zczytanych z tekstu starą metodą: "+suma);
+            System.out.println("Suma liczb zczytanych z tekstu dołączając liczby zapisane słownie: "+suma2);
 
-//        File file = new File("src/main/java/org/example/2023_1_input.txt");
-//        try {
-//            Scanner fsc = new Scanner(file);
-//            int suma = 0;
-//            int suma2 = 0;
-//            while(fsc.hasNextLine()){
-//                suma += zwrocCalaLiczbe(fsc.nextLine());
-//                suma2 += zwrocCalaLiczbeMapa(fsc.nextLine());
-//            }
-//            System.out.println("Suma liczb zczytanych z tekstu starą metodą: "+suma);
-//            System.out.println("Suma liczb zczytanych z tekstu dołączając liczby zapisane słownie: "+suma2);
-//
-//        } catch (FileNotFoundException e) {
-//            throw new RuntimeException(e);
-//        }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
 
     }
 
