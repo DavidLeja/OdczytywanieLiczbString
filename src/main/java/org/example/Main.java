@@ -35,22 +35,25 @@ public class Main {
 
 
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String linia = scanner.nextLine();
+        System.out.println(zwrocOdLewejMapa(linia));
 
-        File file = new File("src/main/java/org/example/2023_1_input.txt");
-        try {
-            Scanner fsc = new Scanner(file);
-            int suma = 0;
-            int suma2 = 0;
-            while(fsc.hasNextLine()){
-                suma += zwrocCalaLiczbe(fsc.nextLine());
-                suma2 += zwrocCalaLiczbeMapa(fsc.nextLine());
-            }
-            System.out.println("Suma liczb zczytanych z tekstu starą metodą: "+suma);
-            System.out.println("Suma liczb zczytanych z tekstu dołączając liczby zapisane słownie: "+suma2);
-
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
+//        File file = new File("src/main/java/org/example/2023_1_input.txt");
+//        try {
+//            Scanner fsc = new Scanner(file);
+//            int suma = 0;
+//            int suma2 = 0;
+//            while(fsc.hasNextLine()){
+//                suma += zwrocCalaLiczbe(fsc.nextLine());
+//                suma2 += zwrocCalaLiczbeMapa(fsc.nextLine());
+//            }
+//            System.out.println("Suma liczb zczytanych z tekstu starą metodą: "+suma);
+//            System.out.println("Suma liczb zczytanych z tekstu dołączając liczby zapisane słownie: "+suma2);
+//
+//        } catch (FileNotFoundException e) {
+//            throw new RuntimeException(e);
+//        }
 
     }
 
@@ -86,23 +89,37 @@ public class Main {
         return Integer.parseInt(number);
     }
 
-    public static int zwrocCalaLiczbeMapa(String line) {
-        List<Character> znalezione = new ArrayList<>();
 
+    public static char zwrocOdLewejMapa(String line) {
         for (int i = 0; i < line.length(); i++) {
-            for (Map.Entry<String, Character> entry : MapaLiczb.entrySet()) {
-                if (line.startsWith(entry.getKey(), i)) {
-                    znalezione.add(entry.getValue());
+            for (var mapa : MapaLiczb) {
+                if (line.startsWith(mapa.getKey(), i)) {
+                    return mapa.getValue();
                 }
             }
         }
-
-        if (znalezione.isEmpty()) {
-            return -1;
-        }
-
-        return Integer.parseInt("" + znalezione.get(0) + znalezione.get(znalezione.size() - 1));
+        return ' ';
     }
+
+
+
+//    public static int zwrocCalaLiczbeMapa(String line) {
+//        List<Character> znalezione = new ArrayList<>();
+//
+//        for (int i = 0; i < line.length(); i++) {
+//            for (Map.Entry<String, Character> entry : MapaLiczb.entrySet()) {
+//                if (line.startsWith(entry.getKey(), i)) {
+//                    znalezione.add(entry.getValue());
+//                }
+//            }
+//        }
+//
+//        if (znalezione.isEmpty()) {
+//            return -1;
+//        }
+//
+//        return Integer.parseInt("" + znalezione.get(0) + znalezione.get(znalezione.size() - 1));
+//    }
 
 
 
